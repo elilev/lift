@@ -33,7 +33,6 @@ button,input,select{ font:inherit; color:inherit; }
 button{ background:none; border:0; cursor:pointer; padding:0; }
 .wrap{ max-width:560px; margin:0 auto; padding:0 16px; }
 
-/* ── header ── */
 header{ position:sticky; top:0; z-index:10; background:rgba(10,10,11,.88);
   backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid var(--line); }
 header .wrap{ display:flex; align-items:center; justify-content:space-between; height:56px; }
@@ -44,10 +43,8 @@ header .wrap{ display:flex; align-items:center; justify-content:space-between; h
 .tabs button{ padding:7px 16px; border-radius:999px; font-weight:600; font-size:14px; color:var(--muted); transition:.2s; }
 .tabs button.on{ background:var(--text); color:var(--bg); }
 
-/* ── section labels ── */
 .lbl{ font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:22px 0 10px; }
 
-/* ── period ── */
 .periods{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
 .period{ text-align:left; background:var(--surface); border:1.5px solid var(--line); border-radius:var(--r);
   padding:14px 14px 12px; transition:.2s; position:relative; overflow:hidden; }
@@ -57,7 +54,6 @@ header .wrap{ display:flex; align-items:center; justify-content:space-between; h
 .period.on{ border-color:var(--acc); background:linear-gradient(160deg, color-mix(in srgb, var(--acc) 14%, var(--surface)), var(--surface) 70%); }
 .period.on .reps{ color:var(--acc); }
 
-/* ── days ── */
 .days{ display:grid; grid-template-columns:repeat(4,1fr); gap:8px; }
 .day{ background:var(--surface); border:1.5px solid var(--line); border-radius:14px; padding:10px 4px 9px; text-align:center; transition:.2s; position:relative; }
 .day .n{ font-family:var(--display); font-style:italic; font-weight:900; font-size:28px; line-height:1; color:var(--dim); }
@@ -68,7 +64,6 @@ header .wrap{ display:flex; align-items:center; justify-content:space-between; h
 .day.next:not(.on)::after{ content:'NEXT'; position:absolute; left:50%; bottom:-8px; transform:translateX(-50%);
   font-size:9px; font-weight:700; letter-spacing:.1em; background:var(--bg); color:var(--dc); padding:0 5px; }
 
-/* ── day hero ── */
 .hero{ margin-top:26px; position:relative; padding:4px 0 2px; }
 .hero .big{ font-family:var(--display); font-style:italic; font-weight:900; font-size:64px; line-height:.86;
   text-transform:uppercase; letter-spacing:-.01em; position:relative; z-index:1; }
@@ -81,7 +76,6 @@ header .wrap{ display:flex; align-items:center; justify-content:space-between; h
 .pill.acc{ background:color-mix(in srgb, var(--acc) 16%, transparent); color:var(--acc); }
 .note{ font-size:13px; color:var(--muted); margin-top:10px; }
 
-/* ── exercise table ── */
 .table{ margin-top:18px; background:var(--surface); border:1px solid var(--line); border-radius:var(--r); overflow:hidden; }
 .row{ display:grid; grid-template-columns:44px 1fr 66px 66px; gap:8px; align-items:center; padding:12px 12px; border-top:1px solid var(--line); position:relative; transition:background .2s; }
 .row:first-child{ border-top:0; }
@@ -104,9 +98,11 @@ body[data-type="pull"] .knee{ color:var(--push); border-color:color-mix(in srgb,
 .wt::placeholder{ color:var(--dim); font-weight:600; }
 .wt:focus{ border-color:var(--acc); box-shadow:0 0 0 3px color-mix(in srgb, var(--acc) 20%, transparent); }
 .wt::-webkit-outer-spin-button,.wt::-webkit-inner-spin-button{ -webkit-appearance:none; margin:0; }
+.up{ font-size:11px; font-weight:700; letter-spacing:.04em; color:var(--muted); border:1.5px solid var(--line); border-radius:999px; padding:3px 9px; margin:-2px 0; transition:.15s; }
+.up.on{ background:var(--acc); border-color:var(--acc); color:#0A0A0B; }
+.goup{ font-size:10px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:#0A0A0B; background:var(--acc); border-radius:4px; padding:2px 5px; }
 .x2{ display:block; text-align:center; font-size:10px; color:var(--muted); margin-top:3px; font-weight:600; }
 
-/* ── finish bar ── */
 .spacer{ height:120px; }
 .bar{ position:fixed; left:0; right:0; bottom:0; z-index:10; padding:12px 0 calc(12px + env(safe-area-inset-bottom));
   background:linear-gradient(to top, var(--bg) 65%, transparent); }
@@ -122,7 +118,6 @@ body[data-type="pull"] .knee{ color:var(--push); border-color:color-mix(in srgb,
 .go:active{ transform:scale(.98); }
 .go:disabled{ background:var(--surface2); color:var(--dim); box-shadow:none; }
 
-/* ── history ── */
 .stats{ display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:18px; }
 .stat{ background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:12px; }
 .stat .v{ font-family:var(--display); font-style:italic; font-weight:900; font-size:34px; line-height:1; color:var(--push); }
@@ -158,7 +153,6 @@ svg.chart{ width:100%; height:auto; display:block; }
 .btn2{ height:46px; border-radius:12px; border:1.5px solid var(--line); background:var(--surface); font-weight:600; font-size:14px; }
 .fine{ font-size:12px; color:var(--dim); margin:10px 2px 0; line-height:1.45; }
 
-/* ── toast ── */
 .toast{ position:fixed; left:50%; top:calc(68px + env(safe-area-inset-top)); transform:translate(-50%,-20px); opacity:0; pointer-events:none;
   background:var(--text); color:var(--bg); font-weight:700; padding:12px 18px; border-radius:999px; z-index:50; transition:.3s; white-space:nowrap; font-size:15px; }
 .toast.show{ opacity:1; transform:translate(-50%,0); }
@@ -214,7 +208,7 @@ svg.chart{ width:100%; height:auto; display:block; }
 <div class="toast" id="toast"></div>
 
 <script>
-/* ───────── Plan ───────── */
+// ───────── Plan ─────────
 const PERIODS = {
   m1:  { label:'Month 1',    months:'November',      focus:'Hypertrophy', work:8, back:12 },
   m23: { label:'Months 2–3', months:'December – January', focus:'Strength', work:6, back:10, note:'Load up to 80% of your 1-rep max.' }
@@ -228,7 +222,7 @@ const DAYS = [
 ];
 const COLOR = { push:'#C8FF2E', pull:'#FF6B2C' };
 
-/* ───────── Storage ───────── */
+// ───────── Storage ─────────
 const KEY = 'liftplan.v1';
 function blank(){ return { weights:{}, history:[], draft:{}, sel:null }; }
 function load(){
@@ -242,7 +236,7 @@ function save(){
 }
 if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(()=>{});
 
-/* ───────── Helpers ───────── */
+// ───────── Helpers ─────────
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const dayById = id => DAYS.find(d => d.id === id) || DAYS[0];
@@ -277,7 +271,7 @@ function toast(msg){
 }
 const buzz = () => { try { navigator.vibrate && navigator.vibrate(12); } catch(e){} };
 
-/* ───────── Train view ───────── */
+// ───────── Train view ─────────
 function renderTrain(){
   const P = PERIODS[S.sel.p], D = dayById(S.sel.d), nxt = nextDayId(S.sel.p);
   document.body.dataset.type = D.type;
@@ -314,7 +308,7 @@ function renderTrain(){
       <button class="chk" aria-label="Mark ${esc(n)} done"><svg viewBox="0 0 24 24" fill="none" stroke="#0A0A0B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button>
       <div class="ex">
         <div class="nm">${esc(n)}</div>
-        <div class="mt">${2 + bk} sets · ${bk} backoff${knee ? ' <span class="knee">Knee-safe</span>' : ''}</div>
+        <div class="mt">${S.weights[n] && S.weights[n].up ? '<span class="goup">↑ Go heavier</span>' : ''}${2 + bk} sets · ${bk} backoff${knee ? ' <span class="knee">Knee-safe</span>' : ''}<button class="up ${dr.u && dr.u[n] ? 'on' : ''}" aria-label="Mark ${esc(n)} to go heavier next time">+ Heavier</button></div>
       </div>
       <div><input class="wt" data-k="w" inputmode="decimal" placeholder="lb" value="${esc(val('w', n))}" aria-label="${esc(n)} working weight"></div>
       <div><input class="wt" data-k="b" inputmode="decimal" placeholder="lb" value="${esc(val('b', n))}" aria-label="${esc(n)} backoff weight">${bk > 1 ? '<span class="x2">× 2 sets</span>' : ''}</div>
@@ -340,6 +334,12 @@ $('#days').addEventListener('click', e => {
   S.sel.d = b.dataset.d; save(); renderTrain();
 });
 $('#table').addEventListener('click', e => {
+  const u = e.target.closest('.up');
+  if (u) {
+    const n = u.closest('.row').dataset.n, d = draft(); d.u = d.u || {};
+    d.u[n] = !d.u[n]; if (!d.u[n]) delete d.u[n];
+    u.classList.toggle('on', !!d.u[n]); buzz(); save(); return;
+  }
   const c = e.target.closest('.chk'); if (!c) return;
   const row = c.closest('.row'), n = row.dataset.n, d = draft();
   d.c[n] = !d.c[n]; if (!d.c[n]) delete d.c[n];
@@ -360,11 +360,11 @@ $('#table').addEventListener('keydown', e => {
 
 $('#finish').addEventListener('click', () => {
   const D = dayById(S.sel.d), dr = draft();
-  const items = D.ex.map(([n, bk]) => ({ n, bk, done: !!dr.c[n], w: val('w', n), b: val('b', n) }));
+  const items = D.ex.map(([n, bk]) => ({ n, bk, done: !!dr.c[n], up: !!(dr.u && dr.u[n]), w: val('w', n), b: val('b', n) }));
   if (!items.some(i => i.done)) return;
   const now = new Date().toISOString();
   S.history.unshift({ id: Date.now().toString(36), at: now, p: S.sel.p, d: D.id, items });
-  items.forEach(i => { if (i.w !== '' || i.b !== '') S.weights[i.n] = { w: i.w, b: i.b, at: now }; });
+  items.forEach(i => { if (i.w !== '' || i.b !== '' || i.up) S.weights[i.n] = { w: i.w, b: i.b, up: i.up, at: now }; });
   delete S.draft[draftKey()];
   const done = items.filter(i => i.done).length;
   S.sel.d = nextDayId(S.sel.p);
@@ -374,7 +374,7 @@ $('#finish').addEventListener('click', () => {
   }
 });
 
-/* ───────── History view ───────── */
+// ───────── History view ─────────
 let chartEx = null;
 function renderHistory(){
   const H = S.history;
@@ -414,7 +414,7 @@ function renderHistory(){
         <span class="info"><div class="d1">${D.name}</div><div class="d2">${fmtDate(h.at)} · ${P.label} · ${P.work}/${P.back}</div></span>
         <span class="cnt">${done}/${h.items.length}</span></button>
       <div class="det"><table><tr><th>Exercise</th><th>Work</th><th>Back</th></tr>
-        ${h.items.map(i => `<tr class="${i.done ? '' : 'no'}"><td>${i.done ? '✓ ' : '– '}${esc(i.n)}</td><td>${esc(i.w) || '—'}</td><td>${esc(i.b) || '—'}</td></tr>`).join('')}
+        ${h.items.map(i => `<tr class="${i.done ? '' : 'no'}"><td>${i.done ? '✓ ' : '– '}${esc(i.n)}${i.up ? ' <b style="color:var(--push)">+</b>' : ''}</td><td>${esc(i.w) || '—'}</td><td>${esc(i.b) || '—'}</td></tr>`).join('')}
       </table><button class="del">Delete session</button></div></div>`;
   }).join('') : `<div class="card empty">No sessions yet. Go lift something.</div>`;
 }
@@ -446,7 +446,7 @@ $('#sessions').addEventListener('click', e => {
   S.history = S.history.filter(h => h.id !== s.dataset.id); save(); renderHistory(); toast('Session deleted');
 });
 
-/* backup */
+// backup
 $('#exportBtn').addEventListener('click', async () => {
   const name = `lift-backup-${new Date().toISOString().slice(0, 10)}.json`;
   const blob = new Blob([JSON.stringify(S, null, 2)], { type: 'application/json' });
@@ -472,7 +472,7 @@ $('#importFile').addEventListener('change', async e => {
   e.target.value = '';
 });
 
-/* ───────── Tabs ───────── */
+// ───────── Tabs ─────────
 document.querySelector('.tabs').addEventListener('click', e => {
   const b = e.target.closest('[data-tab]'); if (!b) return;
   document.querySelectorAll('.tabs button').forEach(x => x.classList.toggle('on', x === b));
